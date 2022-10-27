@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@../assets/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Controller">
+   <left>
+      <HBox prefHeight="500.0" prefWidth="270.0" style="-fx-background-color: #9DA1A7;" BorderPane.alignment="CENTER">
+         <children>
+            <!--Settings Bar-->
+
+
+            <VBox alignment="CENTER" prefHeight="500.0" prefWidth="47.0" styleClass="dark-grey-background">
+               <children>
+                  <!--CURRENT CLIENT ID-->
+                  <Label fx:id="username" text="" visible="false" />
+
+
+                  <Pane prefHeight="90.0" prefWidth="60.0" />
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/chat-white.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/users-group.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/male-user.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/settings.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Pane prefHeight="145.0" prefWidth="60.0" />
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logout.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+
+
+
+            <!--Users List Section-->
+            <VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="235.0" styleClass="medium-grey-background">
+               <children>
+
+                  <!--Search Textfield Area-->
+                  <HBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="168.0">
+                     <children>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/search.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ImageView>
+                        <TextField prefHeight="29.0" prefWidth="128.0" promptText="Search" styleClass="transparent-background">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Ebrima" size="13.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                     <styleClass>
+                        <String fx:value="radius" />
+                        <String fx:value="dark-grey-background" />
+                     </styleClass>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </HBox>
+
+                  <!--Partition <hr>-->
+                  <Pane prefHeight="5.0" prefWidth="210.0" styleClass="dark-grey-background">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Pane>
+                  <ListView fx:id="users" prefHeight="430.0" prefWidth="215.0" styleClass="medium-grey-background">
+<!--                     <HBox />-->
+                  </ListView>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" styleClass="light-grey-background" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="69.0" prefWidth="430.0" styleClass="white-background">
+               <children>
+                  <VBox alignment="CENTER_LEFT" prefHeight="104.0" prefWidth="322.0">
+                     <children>
+                        <Label fx:id="groupName" contentDisplay="CENTER" prefHeight="21.0" prefWidth="154.0" text="Prem Lalchandani" textFill="#636566">
+                           <font>
+                              <Font name="Ebrima Bold" size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT">
+                           <children>
+                              <Circle fill="#50c984" radius="4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Circle>
+                              <Label text="online" textFill="#636566">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/menu.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="55.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <ScrollPane hbarPolicy="NEVER">
+               <content>
+                  <FlowPane fx:id="flowPane" prefHeight="400.0" prefWidth="430.0" styleClass="light-grey-background" />
+               </content>
+            </ScrollPane>
+            <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="430.0" styleClass="white-background">
+               <children>
+                  <TextArea fx:id="typedMessageTF" prefHeight="55.0" prefWidth="364.0" promptText="Type Something..." />
+                  <ImageView fx:id="sendBtn" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true"       onMouseClicked="#sendBtnHandler">
+                     <image>
+                        <Image url="@../images/send.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

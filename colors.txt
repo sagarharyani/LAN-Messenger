@@ -1,0 +1,11 @@
+26 Cannot be done
+27 1NF
+
+
+#46474A - dark grey 		(level 4)
+#636566 - medium dark grey 	(level 3)
+#9DA1A7 - Grey 			(level 2)
+#DADADA - lighest grey 		(level 1)
+#50C984 - green
+
+#FFFFFF - white

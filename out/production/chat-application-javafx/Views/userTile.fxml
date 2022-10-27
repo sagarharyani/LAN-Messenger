@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="MyId" fx:id="userTile" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="215.0" styleClass="medium-grey-background" stylesheets="@../assets/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.UserTileController"
+   onMouseClicked="#clickedHandler">
+   <children>
+
+      <HBox alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" maxHeight="40.0" maxWidth="40.0" minHeight="40.0">
+               <children>
+                  <ImageView fx:id="profilePicture" fitHeight="29.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" styleClass="radius" />
+               </children>
+               <HBox.margin>
+                  <Insets left="5.0" right="10.0" />
+               </HBox.margin>
+               <styleClass>
+                  <String fx:value="radius" />
+                  <String fx:value="light-grey-background" />
+               </styleClass>
+            </HBox>
+            <VBox maxHeight="60.0" prefHeight="48.0" prefWidth="147.0">
+               <children>
+                  <Label fx:id="username" minWidth="160.0" prefHeight="17.0" prefWidth="152.0" text="Prem Lalchandani" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets right="15.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="recentMessage" maxWidth="160.0" minWidth="160.0" text="Prem: What time will you arrive?" textFill="#dadada">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="2.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>

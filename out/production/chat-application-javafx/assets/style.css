@@ -1,0 +1,30 @@
+.list-cell {
+   -fx-background-color: #636566;
+ }
+.white-background{
+    -fx-background-color : #FFFFFF;
+}
+.dark-grey-background{
+    -fx-background-color : #46474A;
+}
+.medium-grey-background{
+    -fx-background-color : #636566 ;
+}
+.grey-background{
+    -fx-background-color : #9DA1A7 ;
+}
+.light-grey-background{
+    -fx-background-color : #DADADA  ;
+}
+.green-background{
+    -fx-background-color : #50C984  ;
+}
+.transparent-background{
+    -fx-background-color : rgba(0, 0, 0, 0)  ;
+}
+.radius{
+    -fx-background-radius: 100px;
+}
+.radius-20{
+    -fx-background-radius: 20px;
+}
