@@ -1,2 +1,2 @@
-# chat-application-javafx
+# chat-application
 
